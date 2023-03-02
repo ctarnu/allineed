@@ -17,7 +17,9 @@
   </head>
   <body>
     <div class="container">
-    <h1 class="text-center nt-2 mb-4">All I need</h1>
+    <h1 class="text-center nt-2 mb-4">
+    {{company_name}}  Careers
+    </h1>
     <img class="img-fluid" id="banner" src="https://allineed.constantintarnu.repl.co/static/banner2.jpg" height="320">
     <h2 class="text-center mt-2 mb-4">About my Web</h2>
     <p class="lead">
@@ -25,11 +27,15 @@
       So i found myself in a small apartment. There was me, a boy, his mom and a woman he met a few weeks before that i had never seen before. They were drinking a lot and at some point we were all naked.
     </p>
     <h2 class="text-center mt-2 mb-4">Open Position</h2>
-    <p >TODO - Show the jobs here</p>
-      <div class="text-center">  
-      <button class="btn btn-primary btn-lg">Contact Us</button>
-        <p>Copyright 2022, Constantin</p>
-      </div>
+    <div>
+      {%for job in jobs%}
+        {% include 'jobitem.html' %}
+      {% endfor %}
+    </div>
+    <div class="text-center">  
+    <button class="btn btn-primary btn-lg">Contact Us</button>
+      <p class="mt-4">Copyright 2022, Constantin</p>
+    </div>
   </div>
   </body>
 </html>  

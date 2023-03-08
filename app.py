@@ -17,15 +17,15 @@ JOBS = [{
   'location': 'Remote'
 }, {
   'id': 4,
-  'title': 'Backend Enginner',
+  'title': 'Backend Enginner 2',
   'location': 'San-Francisco, USA',
-  'salary': '$9,000'
+  'salary': '$39,000'
 }]
 
 
 @app.route("/")
 def hello_ctarnu():
-  return render_template('home.html', jobs=JOBS, company_name='All eeI need')
+  return render_template('home.html', jobs=JOBS, company_name='All I need')
 
 
 @app.route("/api/jobs")
